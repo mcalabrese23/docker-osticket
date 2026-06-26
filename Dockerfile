@@ -61,8 +61,8 @@ RUN set -ex; \
     rm -rf /tmp/pear /var/cache/apk/*
 # DO NOT FORGET TO CHECK THE LANGUAGE PACK DOWNLOAD URL BELOW
 # DO NOT FORGET TO UPDATE "image-version" FILE
-ENV OSTICKET_VERSION=1.17.5 \
-    OSTICKET_SHA256SUM=a9d64b67008c64ae2009ee8abda7354c34ff4486666f931d3012988dd6538bc9
+ENV OSTICKET_VERSION=1.18.4 \
+    OSTICKET_SHA256SUM=a4187df5f52dd41625e6b61b322245853542e12b5969a45f0a6d81f7ab8151a7
 RUN --mount=type=bind,source=utils/verify-plugin.php,target=/tmp/verify-plugin.php,readonly \
     \
     set -ex; \
