@@ -6,7 +6,7 @@ on:
   push:
 
 env:
-  IMAGE_NAME: devinsolutions/osticket
+  IMAGE_NAME: lunixsrl/osticket
 
 jobs:
   image:
