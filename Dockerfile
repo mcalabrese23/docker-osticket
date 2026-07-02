@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.3
 
-FROM php:8.1-fpm-alpine3.16
+FROM php:8.2-fpm-alpine3.20
 RUN set -ex; \
     \
     export CFLAGS="${PHP_CFLAGS:?}"; \
@@ -29,6 +29,8 @@ RUN set -ex; \
         libpng-dev \
         libzip-dev \
         openldap-dev \
+        openssl-dev \
+        linux-headers \
     ; \
     \
     # Install PHP extensions
