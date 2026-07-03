@@ -116,6 +116,8 @@ osTicket-slack-plugin/archive/${OSTICKET_SLACK_VERSION}.tar.gz; \
     tar -xzf osTicket-slack-plugin.tar.gz -C /var/www/html/include/plugins --strip-components 1 \
         osTicket-slack-plugin-${OSTICKET_SLACK_VERSION}/slack; \
     rm osTicket-slack-plugin.tar.gz
+COPY php-memory.ini /usr/local/etc/php/conf.d/zz-memory.ini
+COPY php-fpm-pool.conf /usr/local/etc/php-fpm.d/zzz-tuning.conf
 COPY root /
 CMD ["start"]
 STOPSIGNAL SIGTERM
